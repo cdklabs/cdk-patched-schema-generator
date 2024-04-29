@@ -1,68 +1,28 @@
 # CDK Patched Schema Generator
 
-A GitHub Action that generates AWS CDK-compatible schema files for CloudFormation resources and property types.
+This GitHub action pulls in the latest changes from `@aws-cdk/aws-service-spec` and generates that schema that cdk-from-cfn needs to a CloudFormation template into CDK a App. The action will create two files: `cdk-resources.json` and `cdk-types.json` at the output path provided in the configuration file.
+
+`cdk-resources.json` contains the entire list of resources in the CloudFormation Resource Specification, CloudFormation Registry Schema, SAM Resource Specification, and SAM JSON Schema, contained in [aws-service-spec](https://github.com/cdklabs/awscdk-service-spec).
+
+`cdk-types.json` contains the CDK compatible type information for all properties and attributes of the resources in `cdk-resources.json`, with patches applied and historical types retained when the types change in CloudFormation et all.
+
+This data is pulled from the sources above as well as from Patches, CloudFormation Docs, and Stateful Resources in [aws-service-spec](https://github.com/cdklabs/awscdk-service-spec).
 
 ## Usage
 
-Add this action to your workflow:
+Configure an action that runs one per day:
 
 ```yaml
-- uses: cdklabs/cdk-patched-schema-generator@main
-  with:
-    output-path: ./schemas
-```
-
-### Inputs
-
-| Input | Description | Required | Default |
-|-------|-------------|----------|---------|
-| `output-path` | Directory to save generated schema files | Yes | - |
-
-### Outputs
-
-Generates two files in the specified directory:
-- `cdk-resources.json` - CloudFormation resource schemas
-- `cdk-types.json` - CloudFormation property type schemas
-
-## Example Workflow
-
-```yaml
-name: Generate CDK Schema
 on:
   schedule:
-    - cron: '0 0 * * *'  # Daily
-  workflow_dispatch:
-
+    # Cron format: minute hour day month day-of-the-week
+    - cron: '0 0 * * *'
 jobs:
-  generate:
+  generate_schema:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
       - uses: cdklabs/cdk-patched-schema-generator@main
-        with:
-          output-path: ./cdk-schemas
-      - name: Commit files
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add cdk-schemas/
-          git diff --staged --quiet || git commit -m "Update CDK schemas"
-          git push
+      with:
+        # Required
+        output-path: <path>
 ```
-
-## Development
-
-```bash
-npm install
-npm run build
-npm test
-```
-
-## Security
-
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
-
-## License
-
-This project is licensed under the Apache-2.0 License.
-
