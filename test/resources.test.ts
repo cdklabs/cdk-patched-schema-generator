@@ -6,7 +6,6 @@ describe('Resource Tests', () => {
   const resourcesFromGenerated = generateResourceSchema();
   const resourceKeysFromGenerated: string[] = Object.keys(resourcesFromGenerated);
 
-
   test('correct number of generated resources', () => {
     // Check that we are pulling in all the resources (plus one because we add CfnTag)
     expect(resourceKeysFromGenerated.length).toEqual(resourcesFromDb.length);
