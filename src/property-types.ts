@@ -1,6 +1,5 @@
-import { fillProperties, sort } from './common';
+import { fillProperties, sort, TypeMap } from './common';
 import { getParentResource, getService, getTypes } from './database';
-import { TypeMap } from './types';
 
 export const generatePropertyTypesSchema = (): TypeMap => {
   const propertyTypes: Record<string, any> = {};

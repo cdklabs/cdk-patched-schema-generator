@@ -1,6 +1,5 @@
-import { fillAttributes, fillProperties, sort } from './common';
+import { fillAttributes, fillProperties, sort, TypeMap } from './common';
 import { getResources } from './database';
-import { TypeMap } from './types';
 
 export const generateResourceSchema = (): TypeMap => {
   const resourceTypes: TypeMap = {};
@@ -15,7 +14,7 @@ export const generateResourceSchema = (): TypeMap => {
   }
 
   // TODO: Maybe Add Custom Resources as well, something like this:
-  
+
   // resourceTypes['AWS::CloudFormation::CfnCustomResource'] = {
   //   name: 'CfnCustomResource',
   //   attributes: {},

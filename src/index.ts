@@ -4,13 +4,28 @@ import { writeFile } from './common';
 import { generatePropertyTypesSchema } from './property-types';
 import { generateResourceSchema } from './resources';
 
-async function run() {
-  const outputPath: string = core.getInput('output-path');
+export function run() {
+  let outputPath: string;
 
-  writeFile(generatePropertyTypesSchema(), outputPath);
-  writeFile(generateResourceSchema(), outputPath);
+  try {
+    outputPath = core.getInput('output-path', { required: true });
+  } catch (error) {
+    throw new Error('Failed to get output-path input');
+  }
+
+  if (!outputPath || !outputPath.trim()) {
+    throw new Error('output-path is required and cannot be empty');
+  }
+
+  const propertyTypes = generatePropertyTypesSchema();
+  const resources = generateResourceSchema();
+
+  writeFile(propertyTypes, `${outputPath}/cdk-types.json`);
+  writeFile(resources, `${outputPath}/cdk-resources.json`);
 }
 
-run().catch((error) => {
+try {
+  run();
+} catch (error: any) {
   core.setFailed(error.message);
-});
+}

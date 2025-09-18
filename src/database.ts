@@ -6,29 +6,57 @@ import {
   TypeDefinition,
 } from '@aws-cdk/service-spec-types';
 
-const DATABASE = loadAwsServiceSpecSync();
+let DATABASE: any;
+let SORTED_RESOURCES: Resource[];
+let SORTED_TYPES: TypeDefinition[];
+let initialized = false;
 
-const RESOURCES = DATABASE.all('resource');
-const TYPES = DATABASE.all('typeDefinition');
+const initDatabase = () => {
+  if (!initialized) {
+    DATABASE = loadAwsServiceSpecSync();
+    const RESOURCES = DATABASE.all('resource');
+    const TYPES = DATABASE.all('typeDefinition');
+    SORTED_RESOURCES = Object.values(RESOURCES).sort() as Resource[];
+    SORTED_TYPES = Object.values(TYPES).sort() as TypeDefinition[];
+    initialized = true;
+  }
+};
 
 export const getTypeDefinition = (propertyType: DefinitionReference) => {
+  initDatabase();
   const ref = DATABASE.get('typeDefinition', propertyType.reference.$ref);
   return ref.name;
 };
 
 export const getService = (cloudFormationType: string): Service => {
+  initDatabase();
   const serviceType = cloudFormationType.split('::').slice(0, 2).join('::');
-  return DATABASE.lookup('service', 'cloudFormationNamespace', 'equals', serviceType).only();
+  const results = DATABASE.lookup('service', 'cloudFormationNamespace', 'equals', serviceType);
+
+  try {
+    return results.only();
+  } catch (error) {
+    throw new Error(`Service not found for type ${serviceType}: ${error}`);
+  }
 };
 
 export const getResources = (): Resource[] => {
-  return Object.values(RESOURCES).sort();
+  initDatabase();
+  return SORTED_RESOURCES;
 };
 
 export const getTypes = (): TypeDefinition[] => {
-  return Object.values(TYPES).sort();
+  initDatabase();
+  return SORTED_TYPES;
 };
 
 export const getParentResource = (type: TypeDefinition): Resource => {
-  return DATABASE.incoming('usesType', type).only().entity;
+  initDatabase();
+  const results = DATABASE.incoming('usesType', type);
+
+  try {
+    return results.only().entity;
+  } catch (error) {
+    throw new Error(`Parent resource not found for type ${type.name}: ${error}`);
+  }
 };

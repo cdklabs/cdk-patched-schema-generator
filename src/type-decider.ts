@@ -1,6 +1,6 @@
 import { PropertyType } from '@aws-cdk/service-spec-types';
+import { PrimitiveType } from '@cdklabs/typewriter';
 import { getTypeDefinition } from './database';
-import { Type } from './types';
 
 export class TypeDecider {
   public static getType(
@@ -18,39 +18,37 @@ export class TypeDecider {
     return { type: this.doGetType(propertyType, cloudFormationType) };
   }
 
-  private static doGetType(propertyType: PropertyType, cloudFormationType: string) {
-    const toTypewriterType = ((): any => {
-      switch (propertyType.type) {
-        case 'string':
-          return Type.STRING.spec;
-        case 'boolean':
-          return Type.BOOLEAN.spec;
-        case 'number':
-          return Type.NUMBER.spec;
-        case 'integer':
-          return Type.NUMBER.spec;
-        case 'date-time':
-          return Type.DATE_TIME.spec;
-        case 'ref':
-          const referenceTypeName = getTypeDefinition(propertyType);
-          return Type.named(`${cloudFormationType}.${referenceTypeName}`).spec;
-        case 'array':
-          return { listOf: TypeDecider.doGetType(propertyType.element, cloudFormationType) };
-        case 'json':
-          return Type.JSON.spec;
-        case 'map':
-          return { mapOf: TypeDecider.doGetType(propertyType.element, cloudFormationType) };
-        case 'tag':
-          return Type.named('CfnTag').spec;
-        case 'union':
-          const union: Type[] = propertyType.types.map((t) => {
-            return TypeDecider.doGetType(t, cloudFormationType);
-          });
-          return { unionOf: union };
-        case 'null':
-          return Type.UNDEFINED.spec;
-      }
-    })();
-    return toTypewriterType;
+  private static doGetType(propertyType: PropertyType, cloudFormationType: string): any {
+    switch (propertyType.type) {
+      case 'string':
+        return { primitive: PrimitiveType.String };
+      case 'boolean':
+        return { primitive: PrimitiveType.Boolean };
+      case 'number':
+      case 'integer':
+        return { primitive: PrimitiveType.Number };
+      case 'date-time':
+        return { primitive: PrimitiveType.DateTime };
+      case 'ref':
+        const referenceTypeName = getTypeDefinition(propertyType);
+        return { named: `${cloudFormationType}.${referenceTypeName}` };
+      case 'array':
+        const elementType = this.doGetType(propertyType.element, cloudFormationType);
+        return { listOf: elementType };
+      case 'json':
+        return { primitive: PrimitiveType.Json };
+      case 'map':
+        const mapElementType = this.doGetType(propertyType.element, cloudFormationType);
+        return { mapOf: mapElementType };
+      case 'tag':
+        return { named: 'CfnTag' };
+      case 'union':
+        const unionTypes = propertyType.types.map((t) => this.doGetType(t, cloudFormationType));
+        return { unionOf: unionTypes };
+      case 'null':
+        return { primitive: PrimitiveType.Undefined };
+      default:
+        return { primitive: PrimitiveType.Any };
+    }
   }
 }

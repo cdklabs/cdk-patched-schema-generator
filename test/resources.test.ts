@@ -1,5 +1,3 @@
-// import fs from 'fs-extra';
-
 import { getResources } from '../src/database';
 import { generateResourceSchema } from '../src/resources';
 
@@ -8,10 +6,6 @@ describe('Resource Tests', () => {
   const resourcesFromGenerated = generateResourceSchema();
   const resourceKeysFromGenerated: string[] = Object.keys(resourcesFromGenerated);
 
-  // TODO: Delete this. Using for testing/validation purposes
-  // fs.writeFileSync('resources.json', JSON.stringify(resourcesFromGenerated, null, 2), {
-  //   encoding: 'utf-8',
-  // });
 
   test('correct number of generated resources', () => {
     // Check that we are pulling in all the resources (plus one because we add CfnTag)

@@ -2,21 +2,47 @@ import { Attribute, Property } from '@aws-cdk/service-spec-types';
 import fs from 'fs-extra';
 import { TypeDecider } from './type-decider';
 
+/**
+ * A map of all CloudFormation resources types
+ */
+export interface TypeMap {
+  [name: string]: ResourceType;
+}
+
+export interface PropertyInfo {
+  name: string;
+  valueType: {
+    primitive?: string;
+    [key: string]: unknown;
+  };
+  required?: boolean;
+}
+
+export interface ResourceType {
+  name: string;
+  attributes?: Record<string, PropertyInfo>;
+  properties: Record<string, PropertyInfo>;
+}
+
 const fill = (
   items: Record<string, Attribute | Property>,
   cloudFormationType: string,
   isAttribute: boolean
 ) => {
-  let itemList: Record<string, any> = {};
-  Object.entries(items).forEach(([id, item]): any => {
-    let type = TypeDecider.getType(cloudFormationType, item.type, item.previousTypes);
+  const itemList = Object.entries(items).reduce(
+    (acc, [id, item]) => {
+      const type = TypeDecider.getType(cloudFormationType, item.type, item.previousTypes);
+      const required = isAttribute ? undefined : 'required' in item ? item.required : undefined;
 
-    itemList[id] = {
-      name: `${isAttribute ? 'attr' : ''}${id}`,
-      valueType: type.type,
-      required: isAttribute ? undefined : (item as Property).required,
-    };
-  });
+      acc[id] = {
+        name: `${isAttribute ? 'attr' : ''}${id}`,
+        valueType: type.type,
+        required,
+      };
+      return acc;
+    },
+    {} as Record<string, any>
+  );
   return sort(itemList);
 };
 
@@ -39,7 +65,12 @@ export const fillProperties = (items: Record<string, Property>, cloudFormationTy
 export const writeFile = (schema: any, outputPath: string) => {
   console.log(`Generating ${outputPath}`);
 
-  fs.writeFileSync(outputPath, JSON.stringify(schema, null, 2), {
-    encoding: 'utf-8',
-  });
+  try {
+    const jsonContent = JSON.stringify(schema, null, 2);
+    fs.writeFileSync(outputPath, jsonContent, {
+      encoding: 'utf-8',
+    });
+  } catch (error) {
+    throw new Error(`Failed to write file ${outputPath}: ${error}`);
+  }
 };
