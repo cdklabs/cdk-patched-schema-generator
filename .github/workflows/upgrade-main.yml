@@ -1,0 +1,47 @@
+name: upgrade-main
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: 0 0 * * *
+      
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  upgrade:
+    name: Upgrade Dependencies
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          ref: main
+      - name: Install dependencies
+        run: yarn install --check-files --frozen-lockfile
+      - name: Upgrade dependencies
+        run: |-
+          npx projen upgrade
+          npx projen build
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.PROJEN_GITHUB_TOKEN }}
+          commit-message: |-
+            chore(deps): upgrade dependencies
+
+            Upgrades project dependencies. See details in [workflow run].
+
+            [Workflow Run]: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+            ------
+          title: "chore(deps): upgrade dependencies"
+          body: |-
+            Upgrades project dependencies. See details in [workflow run].
+
+            [Workflow Run]: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            
+            This PR was created by the upgrade-main workflow.
+          branch: automation/upgrade-main
+          delete-branch: true
+          labels: auto-approve
