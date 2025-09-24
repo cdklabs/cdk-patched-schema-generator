@@ -54,18 +54,18 @@
     "@csstools/css-tokenizer" "^3.0.3"
     lru-cache "^10.4.3"
 
-"@aws-cdk/aws-service-spec@^0.1.98":
-  version "0.1.98"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-service-spec/-/aws-service-spec-0.1.98.tgz#cc8224815c5bab18167bd2f11eb85ea559b2a91d"
-  integrity sha512-oif2Gxp6Tb9FoT4iw1M/DPULshqK/DL7Bbo/3ss7uTHm5DDsI48tXU4ooEiiFNwLkMAp1Bp+76iG0wkgNqWwmw==
+"@aws-cdk/aws-service-spec@^0.1.99":
+  version "0.1.99"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-service-spec/-/aws-service-spec-0.1.99.tgz#4240270196b3099416245a9fdd2992b8d08d2cca"
+  integrity sha512-8NAVqXZLdfgQoPwsctmbnSI8pttr8LsrmjRxXgPu8dR9dYXxkdrMyyUltMFlkpxglWg6wlxJ1CXH6I9uWhsLuQ==
   dependencies:
-    "@aws-cdk/service-spec-types" "^0.0.164"
+    "@aws-cdk/service-spec-types" "^0.0.165"
     "@cdklabs/tskb" "^0.0.3"
 
-"@aws-cdk/service-spec-types@^0.0.164":
-  version "0.0.164"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/service-spec-types/-/service-spec-types-0.0.164.tgz#9c19b41234a1dd7fa5b0000c0ea61480058cdc15"
-  integrity sha512-Uy28KdwlotnGAH89PsIMH5bUEF8jb2W4FTaHrO8yRu70PgrnqH6j/xVWlyrp1JRd05CorZUhV9SWTdbCdzMU6Q==
+"@aws-cdk/service-spec-types@^0.0.165":
+  version "0.0.165"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/service-spec-types/-/service-spec-types-0.0.165.tgz#3afb97c63e5c11d71ac577f7d9cf5dac08c61fff"
+  integrity sha512-sSZRamu7OF674koINbbgwrh27RPfQfeti3EphwaQBVaBOA8JY0FhifDZ3Ehw+jFARiJAMSNP++XYDbNbdXee8A==
   dependencies:
     "@cdklabs/tskb" "^0.0.3"
 
@@ -2294,9 +2294,9 @@ dunder-proto@^1.0.0, dunder-proto@^1.0.1:
     gopd "^1.2.0"
 
 electron-to-chromium@^1.5.218:
-  version "1.5.222"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.222.tgz#965c93783ad989116b74593ae3068b9466fdb237"
-  integrity sha512-gA7psSwSwQRE60CEoLz6JBCQPIxNeuzB2nL8vE03GK/OHxlvykbLyeiumQy1iH5C2f3YbRAZpGCMT12a/9ih9w==
+  version "1.5.223"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.223.tgz#cf9b1aebba1c8ee5e50d1c9e198229e15bc87b28"
+  integrity sha512-qKm55ic6nbEmagFlTFczML33rF90aU+WtrJ9MdTCThrcvDNdUHN4p6QfVN78U06ZmguqXIyMPyYhw2TrbDUwPQ==
 
 emittery@^0.13.1:
   version "0.13.1"
