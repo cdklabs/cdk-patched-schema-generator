@@ -9,6 +9,10 @@ const project = new GitHubActionTypeScriptProject({
   },
   githubOptions: {
     mergify: false,
+    mergeQueue: true,
+    mergeQueueOptions: {
+      autoQueue: true,
+    },
   },
   deps: [
     '@octokit/graphql',
