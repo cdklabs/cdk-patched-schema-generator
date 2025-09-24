@@ -42,6 +42,7 @@ const project = new GitHubActionTypeScriptProject({
       maxWorkers: '50%',
     },
   },
+  gitignore: ['/test-output/'],
 });
 
 project.package.addField('prettier', {
