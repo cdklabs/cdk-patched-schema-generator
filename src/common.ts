@@ -56,14 +56,23 @@ export const mapPropertiesToSchema = (
 
 // Language binding generators
 const serviceNameTransforms = {
-  python: (service: Service) => service.name.replace('-', '_'),
-  golang: (service: Service) => service.name.replace('-', ''),
-  java: (service: Service) => service.name.replace('aws-', 'services.').replace('-', '.'),
+  python: (service: Service) => service.name.replace(/-/, '_'),
+  golang: (service: Service) => service.name.replace(/-/, ''),
+  java: (service: Service) => service.name.replace('aws-', 'services.').replace(/-/, '.'),
   csharp: (service: Service) => {
     const namespace = service.cloudFormationNamespace.split('::')[0];
-    return `${namespace}.${service.capitalized}`;
+    // CSharp stylizes ApiGatewayV2 as APIGatewayV2, the same is not true for ApiGateway
+    return `${namespace}.${service.capitalized.replace('ApiGatewayV2', 'APIGatewayV2')}`;
   },
   typescript: (service: Service) => service.name,
+};
+
+// CWE warning is not applicable. This is not HTML input or output.
+const goPackageNameTransform = (service: Service) => {
+  return service.capitalized
+    .replace(/([A-Z]+)([A-Z][a-z])/g, '$1_$2')
+    .replace(/([a-z])([A-Z])/g, '$1_$2')
+    .toLowerCase();
 };
 
 export const generateCoreBindings = (name: string) => ({
@@ -85,7 +94,7 @@ export const generateBindings = (service: Service, name: string) => ({
   },
   golang: {
     module: `${CDK_BASES.golang}/${serviceNameTransforms.golang(service)}`,
-    package: service.shortName,
+    package: goPackageNameTransform(service),
     name: name.replace('.', '_'),
   },
   java: {

@@ -130,7 +130,7 @@ describe('Output Format Validation', () => {
         expect(construct.golang).toHaveProperty('name');
         expect(construct.golang.name).toMatch(/^Cfn[A-Za-z0-9]+$/);
         expect(construct.golang.module).toMatch(/^github\.com\/aws\/aws-cdk-go\/awscdk\/v2\/aws/);
-        expect(construct.golang.package).toMatch(/^[a-z0-9]+$/);
+        expect(construct.golang.package).toMatch(/^[a-z0-9_]+$/);
 
         // Java
         expect(construct.java).toHaveProperty('package');
@@ -172,7 +172,7 @@ describe('Output Format Validation', () => {
         expect(construct.golang).toHaveProperty('name');
         expect(construct.golang.name).toMatch(/^Cfn[A-Za-z0-9]+$/);
         expect(construct.golang.module).toMatch(/^github\.com\/aws\/aws-cdk-go\/awscdk\/v2\/alexa/);
-        expect(construct.golang.package).toMatch(/^[a-z0-9]+$/);
+        expect(construct.golang.package).toMatch(/^[a-z0-9_]+$/);
 
         // Java
         expect(construct.java).toHaveProperty('package');
@@ -188,30 +188,93 @@ describe('Output Format Validation', () => {
       });
     });
 
-    test('should have consistent AWS service names across languages', () => {
-      const awsResources = Object.entries(resourceSchema).filter(([cloudFormationType]) =>
-        cloudFormationType.startsWith('AWS::')
+    test('should handle AWS Serverless service naming', () => {
+      const serverlessResources = Object.entries(resourceSchema).filter(([cloudFormationType]) =>
+        cloudFormationType.startsWith('AWS::Serverless::')
+      );
+
+      serverlessResources.forEach(([, resource]) => {
+        const construct = resource.construct!;
+        expect(construct.typescript.module).toBe('aws-cdk-lib/aws-sam');
+        expect(construct.csharp.namespace).toBe('Amazon.CDK.AWS.SAM');
+        expect(construct.golang.module).toBe('github.com/aws/aws-cdk-go/awscdk/v2/awssam');
+        expect(construct.golang.package).toBe('sam');
+        expect(construct.java.package).toBe('software.amazon.awscdk.services.sam');
+        expect(construct.python.module).toBe('aws_cdk.aws_sam');
+      });
+    });
+
+    test('should handle AWS ApiGatewayV2 C# naming', () => {
+      const apiGwV2Resources = Object.entries(resourceSchema).filter(([cloudFormationType]) =>
+        cloudFormationType.startsWith('AWS::ApiGatewayV2::')
+      );
+
+      apiGwV2Resources.forEach(([, resource]) => {
+        expect(resource.construct!.csharp.namespace).toBe('Amazon.CDK.AWS.APIGatewayV2');
+      });
+    });
+
+    test('should have consistent AWS TypeScript modules', () => {
+      const awsResources = Object.entries(resourceSchema).filter(
+        ([cloudFormationType]) =>
+          cloudFormationType.startsWith('AWS::') &&
+          !cloudFormationType.startsWith('AWS::Serverless::')
       );
 
       awsResources.forEach(([cloudFormationType, resource]) => {
-        const [, originalServiceName] = cloudFormationType.split('::');
-        const moduleServiceName =
-          originalServiceName === 'Serverless' ? 'SAM' : originalServiceName;
-        const moduleServiceNameLower = moduleServiceName.toLowerCase();
-        const csharpServiceName =
-          originalServiceName === 'Serverless' ? 'SAM' : originalServiceName;
-        const construct = resource.construct!;
+        const [, serviceName] = cloudFormationType.split('::');
+        expect(resource.construct!.typescript.module).toBe(
+          `aws-cdk-lib/aws-${serviceName.toLowerCase()}`
+        );
+      });
+    });
 
-        expect(construct.typescript.module).toBe(`aws-cdk-lib/aws-${moduleServiceNameLower}`);
-        expect(construct.csharp.namespace).toBe(`Amazon.CDK.AWS.${csharpServiceName}`);
-        expect(construct.golang.module).toBe(
-          `github.com/aws/aws-cdk-go/awscdk/v2/aws${moduleServiceNameLower}`
+    test('should have consistent AWS Go packages', () => {
+      const awsResources = Object.entries(resourceSchema).filter(
+        ([cloudFormationType]) =>
+          cloudFormationType.startsWith('AWS::') &&
+          !cloudFormationType.startsWith('AWS::Serverless::')
+      );
+
+      awsResources.forEach(([cloudFormationType, resource]) => {
+        const [, serviceName] = cloudFormationType.split('::');
+        const golangPackageName = serviceName
+          .replace(/([A-Z]+)([A-Z][a-z])/g, '$1_$2')
+          .replace(/([a-z])([A-Z])/g, '$1_$2')
+          .toLowerCase();
+
+        expect(resource.construct!.golang.module).toBe(
+          `github.com/aws/aws-cdk-go/awscdk/v2/aws${serviceName.toLowerCase()}`
         );
-        expect(construct.golang.package).toBe(moduleServiceNameLower);
-        expect(construct.java.package).toBe(
-          `software.amazon.awscdk.services.${moduleServiceNameLower}`
+        expect(resource.construct!.golang.package).toBe(golangPackageName);
+      });
+    });
+
+    test('should have consistent AWS Java packages', () => {
+      const awsResources = Object.entries(resourceSchema).filter(
+        ([cloudFormationType]) =>
+          cloudFormationType.startsWith('AWS::') &&
+          !cloudFormationType.startsWith('AWS::Serverless::')
+      );
+
+      awsResources.forEach(([cloudFormationType, resource]) => {
+        const [, serviceName] = cloudFormationType.split('::');
+        expect(resource.construct!.java.package).toBe(
+          `software.amazon.awscdk.services.${serviceName.toLowerCase()}`
         );
-        expect(construct.python.module).toBe(`aws_cdk.aws_${moduleServiceNameLower}`);
+      });
+    });
+
+    test('should have consistent AWS Python modules', () => {
+      const awsResources = Object.entries(resourceSchema).filter(
+        ([cloudFormationType]) =>
+          cloudFormationType.startsWith('AWS::') &&
+          !cloudFormationType.startsWith('AWS::Serverless::')
+      );
+
+      awsResources.forEach(([cloudFormationType, resource]) => {
+        const [, serviceName] = cloudFormationType.split('::');
+        expect(resource.construct!.python.module).toBe(`aws_cdk.aws_${serviceName.toLowerCase()}`);
       });
     });
 
