@@ -54,18 +54,18 @@
     "@csstools/css-tokenizer" "^3.0.3"
     lru-cache "^10.4.3"
 
-"@aws-cdk/aws-service-spec@^0.1.113":
-  version "0.1.113"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-service-spec/-/aws-service-spec-0.1.113.tgz#f720c93307a11c96fade8317aff276d59b152ae4"
-  integrity sha512-mHEb0fEIQEoTcD9MZg0g0JPElFrOAxa5MkYSunzHEum9HCTfo+jJ7lohvSEQMTus+kO9e8VI8c1g1O9EuVIfiA==
+"@aws-cdk/aws-service-spec@^0.1.114":
+  version "0.1.114"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-service-spec/-/aws-service-spec-0.1.114.tgz#f5ab26e4d5e61d467d2a22cc3eb4e9ab068a413b"
+  integrity sha512-vPr1R4HNQ9e8JoWw+kFVGSf0Axl5Nizq+kXH8In3hu/rGcTWO6xZUHukRqn7uQSudONmpDM3fTq+b//ElRsfMg==
   dependencies:
-    "@aws-cdk/service-spec-types" "^0.0.179"
+    "@aws-cdk/service-spec-types" "^0.0.180"
     "@cdklabs/tskb" "^0.0.3"
 
-"@aws-cdk/service-spec-types@^0.0.179":
-  version "0.0.179"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/service-spec-types/-/service-spec-types-0.0.179.tgz#8074ad0e8f5a611605e6317bf6afc3015322d9b2"
-  integrity sha512-K0dKAIqDciNDuGq7JtdXbNoR5WoUDH2Zm4dtnepJwDPrytNfZpmXlzkFMVpa/jH+zk7r7ogwd83AhCatvpYJfg==
+"@aws-cdk/service-spec-types@^0.0.180":
+  version "0.0.180"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/service-spec-types/-/service-spec-types-0.0.180.tgz#63452c52ad2cd0fa192075089eef73ecdaa174ea"
+  integrity sha512-ehrImMzF0gDkPFpAWUbnsBlGmkVmcja6B62JDVJ9Bc8IW5QxHdhIsvSFmAhrqjY+4xa61qJ3uSL+ey8uXxcweA==
   dependencies:
     "@cdklabs/tskb" "^0.0.3"
 
@@ -342,10 +342,10 @@
   resolved "https://registry.yarnpkg.com/@cdklabs/tskb/-/tskb-0.0.3.tgz#4b79846d9381eb1252ba85d5d20b7cd7d99b6ecb"
   integrity sha512-JR+MuD4awAXvutu7HArephXfZm09GPTaSAQUqNcJB5+ZENRm4kV+L6vJL6Tn1xHjCcHksO+HAqj3gYtm5K94vA==
 
-"@cdklabs/typewriter@^0.0.9":
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/@cdklabs/typewriter/-/typewriter-0.0.9.tgz#16d0b8feb1b16b862ed19515437f564c24e2a493"
-  integrity sha512-GdCZ3tHOBVQjp+Vh/kUpnBUldd/wBqP1A9Xl10ZGfbIqENYrNBZTWN8HEbr9YQ6Z05wHfIEmmGqkCmJt7FbTGQ==
+"@cdklabs/typewriter@^0.0.10":
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/@cdklabs/typewriter/-/typewriter-0.0.10.tgz#b1d09c036e4dc979777d9cbaa3e36625fd7cc3fe"
+  integrity sha512-s2rzcULriGFBansAdM6n2RQ27MfLVsleeWKPtX9k3dwJlfsrblgUzi3ch4vRPVVnguNIgxCkKg5sphqvGLciZQ==
 
 "@cspotcode/source-map-support@^0.8.0":
   version "0.8.1"
@@ -2296,9 +2296,9 @@ dunder-proto@^1.0.0, dunder-proto@^1.0.1:
     gopd "^1.2.0"
 
 electron-to-chromium@^1.5.238:
-  version "1.5.248"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.248.tgz#e69941494efbc69ebf2803517f4e85d016013d4b"
-  integrity sha512-zsur2yunphlyAO4gIubdJEXCK6KOVvtpiuDfCIqbM9FjcnMYiyn0ICa3hWfPr0nc41zcLWobgy1iL7VvoOyA2Q==
+  version "1.5.249"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.249.tgz#e4fc3a3e60bb347361e4e876bb31903a9132a447"
+  integrity sha512-5vcfL3BBe++qZ5kuFhD/p8WOM1N9m3nwvJPULJx+4xf2usSlZFJ0qoNYO2fOX4hi3ocuDcmDobtA+5SFr4OmBg==
 
 emittery@^0.13.1:
   version "0.13.1"
