@@ -54,18 +54,18 @@
     "@csstools/css-tokenizer" "^3.0.3"
     lru-cache "^10.4.3"
 
-"@aws-cdk/aws-service-spec@^0.1.117":
-  version "0.1.117"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-service-spec/-/aws-service-spec-0.1.117.tgz#95739a19920b4564b581a853b0986959e3a36ad5"
-  integrity sha512-gzEaNMyvM52aXAj2WGBLDf8b2h51+3eN+i4LyCAAm55tP2fkHR/Dv/lHSkUf9lxrGYfF6+J2IWo2pWMga+fiXw==
+"@aws-cdk/aws-service-spec@^0.1.118":
+  version "0.1.118"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-service-spec/-/aws-service-spec-0.1.118.tgz#92a15c4adda8bf67cdc8dced2849de7211715c04"
+  integrity sha512-1osFlJPIQxCQf+F2afdYHd9SZcOF0gHDU02uiEEmgm4AakUfVP0XkQw6cNwGjs7n8djzw80AKYzD4c/9H0nESw==
   dependencies:
-    "@aws-cdk/service-spec-types" "^0.0.183"
+    "@aws-cdk/service-spec-types" "^0.0.184"
     "@cdklabs/tskb" "^0.0.3"
 
-"@aws-cdk/service-spec-types@^0.0.183":
-  version "0.0.183"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/service-spec-types/-/service-spec-types-0.0.183.tgz#ac33ca80482a06d5322509b5cc859ed4052ef6c2"
-  integrity sha512-uGD0B7Sa/uGygo+1xZ77k8o5j/FNdp7/ZsBR282op9nYShmD/ONDWKnAm6MyvTQk1+Usl+7WJLGAY+NRBqAxdQ==
+"@aws-cdk/service-spec-types@^0.0.184":
+  version "0.0.184"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/service-spec-types/-/service-spec-types-0.0.184.tgz#e9117f9f34374676545a2562367fca2edc89d305"
+  integrity sha512-/EBaebR/C5IwnHLjhvflpcGeA0CDiCra54U0mW02AiSQqVxu465hXxATJQldSLco5Qnn3Mc9cuxCSuR4J0EZ5A==
   dependencies:
     "@cdklabs/tskb" "^0.0.3"
 
@@ -1768,9 +1768,9 @@ camelcase@^6.2.0:
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
 caniuse-lite@^1.0.30001754:
-  version "1.0.30001755"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001755.tgz#c01cfb1c30f5acf1229391666ec03492f4c332ff"
-  integrity sha512-44V+Jm6ctPj7R52Na4TLi3Zri4dWUljJd+RDm+j8LtNCc/ihLCT+X1TzoOAkRETEWqjuLnh9581Tl80FvK7jVA==
+  version "1.0.30001756"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001756.tgz#fe80104631102f88e58cad8aa203a2c3e5ec9ebd"
+  integrity sha512-4HnCNKbMLkLdhJz3TToeVWHSnfJvPaq6vu/eRP0Ahub/07n484XHhBF5AJoSGHdVrS8tKFauUQz8Bp9P7LVx7A==
 
 case@^1.6.3:
   version "1.6.3"
@@ -2296,9 +2296,9 @@ dunder-proto@^1.0.0, dunder-proto@^1.0.1:
     gopd "^1.2.0"
 
 electron-to-chromium@^1.5.249:
-  version "1.5.256"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.256.tgz#f07f78de0893ab060f60ac897195c029a3b50d1a"
-  integrity sha512-uqYq1IQhpXXLX+HgiXdyOZml7spy4xfy42yPxcCCRjswp0fYM2X+JwCON07lqnpLEGVCj739B7Yr+FngmHBMEQ==
+  version "1.5.257"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.257.tgz#5ddd164fdc45fdfcb1ae88a424ec38734e4b8874"
+  integrity sha512-VNSOB6JZan5IQNMqaurYpZC4bDPXcvKlUwVD/ztMeVD7SwOpMYGOY7dgt+4lNiIHIpvv/FdULnZKqKEy2KcuHQ==
 
 emittery@^0.13.1:
   version "0.13.1"
@@ -4632,10 +4632,10 @@ projen-github-action-typescript@^0.0.514:
   resolved "https://registry.yarnpkg.com/projen-github-action-typescript/-/projen-github-action-typescript-0.0.514.tgz#c0286a383aac7fc2a9bb0b8260252b79e70be3a2"
   integrity sha512-7DcemXYrvkRSYY+iXgQCHdWXxLbfmTDlpGyxciM0WrOStZ4ymDkTnjkz66SyuGZU/E7EMxMy2b4SruYls5svZg==
 
-projen@^0.98.13:
-  version "0.98.13"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.98.13.tgz#6996d4d4905c7f1495565f90cabe867f8ae4e195"
-  integrity sha512-T6VfpFNS0v1QikOHJ0B6u1xZcX1+xyKXkwMRU4Wse6ePUexEw0oR0PF47JW0DGYE7MyWNSyvn5R9+Olbckh6rw==
+projen@^0.98.15:
+  version "0.98.15"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.98.15.tgz#8080aa91834b50359374b8053710f6efcc655220"
+  integrity sha512-xeJdvP0ClcYn7KZ4H09aQyxM0sJoi3BYeyhz7sR9+ohwiEjlYkSqvj95B1FctBi2aXp0z3DPoT097Ijqe4RRyQ==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
