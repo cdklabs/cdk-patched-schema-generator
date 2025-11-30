@@ -54,18 +54,18 @@
     "@csstools/css-tokenizer" "^3.0.3"
     lru-cache "^10.4.3"
 
-"@aws-cdk/aws-service-spec@^0.1.124":
-  version "0.1.124"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-service-spec/-/aws-service-spec-0.1.124.tgz#d9adf58515f48c0f00dfc9081bfd52cb7ac2a895"
-  integrity sha512-OcUgUrPVQqDk9ZPIQp2dYm9aJRj+5UKjwEpMyG5XseJhhA//CA1eUSDeVtlvH99ezCRzGbmderbmd3/rB3dHPw==
+"@aws-cdk/aws-service-spec@^0.1.125":
+  version "0.1.125"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-service-spec/-/aws-service-spec-0.1.125.tgz#c240a06cf2bbb9755040c34a6886f6aa28afb8ec"
+  integrity sha512-c19P7YpqOnLhVkT3ms9p0BMvbPTCSC7Eggs5OxG44oQMSCvHzWEe2JwNgTiO/1uG2O4NtwK9HlRhCR755MPmcQ==
   dependencies:
-    "@aws-cdk/service-spec-types" "^0.0.190"
+    "@aws-cdk/service-spec-types" "^0.0.191"
     "@cdklabs/tskb" "^0.0.4"
 
-"@aws-cdk/service-spec-types@^0.0.190":
-  version "0.0.190"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/service-spec-types/-/service-spec-types-0.0.190.tgz#d0ca0895fb59ea143a09ee854fa24c6371558e3d"
-  integrity sha512-MBFw+7sWvnAVT0oBIZnifCT7k/zGOlJ3Pm7aUDlgqoWDy2evYp53uyfcI5oLOi786Y6qyzRpMzTFkzBhEljHig==
+"@aws-cdk/service-spec-types@^0.0.191":
+  version "0.0.191"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/service-spec-types/-/service-spec-types-0.0.191.tgz#bbcd18ff4a5a8f8d54f93bba51df7ae26333939f"
+  integrity sha512-Dr0HemmqSfIe+nM9ZQu9jnXbs9lgDwP8kz9EoSL90RsH/R02LwEJNnWYAQQUWNlmc2v5YC8i6EIE4usKOJv86w==
   dependencies:
     "@cdklabs/tskb" "^0.0.4"
 
@@ -342,10 +342,10 @@
   resolved "https://registry.yarnpkg.com/@cdklabs/tskb/-/tskb-0.0.4.tgz#6d7af32427ef947dddcb6f1f1d76d75924e33323"
   integrity sha512-NFx1X0l7p5DyHtLLEyNeh1hPN4UN9hTkZkzFs/Mp+kFk7dpdINGmGVpCfRDjJ2DrcNSNENUmT+w8g73TvmBbTw==
 
-"@cdklabs/typewriter@^0.0.11":
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/@cdklabs/typewriter/-/typewriter-0.0.11.tgz#72f814ec5d86d4f66d800d3e8bd1498fe3380cd8"
-  integrity sha512-cIgD/OAQHJJdHneCFNVlXaADhf7zzMdNYVw94+2zQYXrV7k1cDd5fNCDpg924hzkA0h0hu7qu7iII4gsVMUeGw==
+"@cdklabs/typewriter@^0.0.12":
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/@cdklabs/typewriter/-/typewriter-0.0.12.tgz#dd6348ff5284535c0134b5e43d5bb349aaf5c1db"
+  integrity sha512-xjiGYgMvCGwl5HFaauOjlvgBVXHtYdx8TFgn0T0E6ka95wnMhsKWvGolp8KFsK9sQ9vUr11B205DwUqquKBqLQ==
 
 "@cspotcode/source-map-support@^0.8.0":
   version "0.8.1"
@@ -4607,10 +4607,10 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@^3.7.2:
-  version "3.7.2"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.7.2.tgz#7b393a865f9dd97bc244215db9aac8e04dc1841b"
-  integrity sha512-n3HV2J6QhItCXndGa3oMWvWFAgN1ibnS7R9mt6iokScBOC0Ul9/iZORmU2IWUMcyAQaMPjTlY3uT34TqocUxMA==
+prettier@^3.7.3:
+  version "3.7.3"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.7.3.tgz#99a8891f6c990cfa54bcff2a0d276e6f845e59ab"
+  integrity sha512-QgODejq9K3OzoBbuyobZlUhznP5SKwPqp+6Q6xw6o8gnhr4O85L2U915iM2IDcfF2NPXVaM9zlo9tdwipnYwzg==
 
 pretty-format@^29.0.0, pretty-format@^29.7.0:
   version "29.7.0"
