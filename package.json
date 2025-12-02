@@ -39,15 +39,15 @@
     "prettier": "^3.7.3",
     "projen": "^0.98.26",
     "projen-github-action-typescript": "^0.0.514",
-    "ts-jest": "^29.4.5",
+    "ts-jest": "^29.4.6",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   },
   "dependencies": {
     "@actions/core": "^1.11.1",
     "@actions/github": "^6.0.1",
-    "@aws-cdk/aws-service-spec": "^0.1.125",
-    "@aws-cdk/service-spec-types": "^0.0.191",
+    "@aws-cdk/aws-service-spec": "^0.1.126",
+    "@aws-cdk/service-spec-types": "^0.0.192",
     "@cdklabs/typewriter": "^0.0.12",
     "@octokit/graphql": "^8.2.2",
     "@octokit/rest": "^20.1.2",
