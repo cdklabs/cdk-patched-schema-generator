@@ -43,18 +43,18 @@
   resolved "https://registry.yarnpkg.com/@actions/io/-/io-1.1.3.tgz#4cdb6254da7962b07473ff5c335f3da485d94d71"
   integrity sha512-wi9JjgKLYS7U/z8PPbco+PvTb/nRWjeoFlJ1Qer83k/3C5PHQi28hiVdeE2kHXmIL99mQFawx8qt/JPjZilJ8Q==
 
-"@aws-cdk/aws-service-spec@^0.1.142":
-  version "0.1.142"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-service-spec/-/aws-service-spec-0.1.142.tgz#a1f513d715848701db5f4e218a2e687a9cf9ee95"
-  integrity sha512-KOFHj1sGjVoaBFPSXbttC+tD0CJ17AizpIhGoQbHScckXIplSjj5njBU2tQXpKUg9915ZhDL1JIUdQ/+CPCGRw==
+"@aws-cdk/aws-service-spec@^0.1.143":
+  version "0.1.143"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-service-spec/-/aws-service-spec-0.1.143.tgz#a89ef960507f866a19c4e2118132caea5ef66318"
+  integrity sha512-W0FehRUeUN4juIeY7fcJlFW+VPmcru42pq6tg8axDTnS4VwvMt32w6at4H3WLcUm4NY4SMSd18Q0u5lrhyCINg==
   dependencies:
-    "@aws-cdk/service-spec-types" "^0.0.208"
+    "@aws-cdk/service-spec-types" "^0.0.209"
     "@cdklabs/tskb" "^0.0.4"
 
-"@aws-cdk/service-spec-types@^0.0.208":
-  version "0.0.208"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/service-spec-types/-/service-spec-types-0.0.208.tgz#83770d5f4825e8866c24e2128858f20da46171b0"
-  integrity sha512-1no0ijnM/3AbVUFNXDxc3NHAb58dwkuEskaibofnA2Hq30M7xuXOODO9e27tz4LUtoiWbuLpa9E2nygGKl5xlQ==
+"@aws-cdk/service-spec-types@^0.0.209":
+  version "0.0.209"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/service-spec-types/-/service-spec-types-0.0.209.tgz#ec7d0c16ac230f3408d3beee1b9bfb4399a5801d"
+  integrity sha512-S/NTyR3CoJczjnVLEto4u4uJyNa4ZZ8/XwgND/TYTy9YIHnxvsKmA9bSz4MVDrx/hEiau/1qGRgbY9IzwXiTaw==
   dependencies:
     "@cdklabs/tskb" "^0.0.4"
 
@@ -1112,9 +1112,9 @@
   integrity sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==
 
 "@types/node@*":
-  version "25.0.9"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-25.0.9.tgz#81ce3579ddf67cae812a9d49c8a0ab90c82e7782"
-  integrity sha512-/rpCXHlCWeqClNBwUhDcusJxXYDjZTyE8v5oTO7WbL8eij2nKhUeU89/6xgjU7N4/Vh3He0BtyhJdQbDyhiXAw==
+  version "25.0.10"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-25.0.10.tgz#4864459c3c9459376b8b75fd051315071c8213e7"
+  integrity sha512-zWW5KPngR/yvakJgGOmZ5vTBemDoSqF3AcV/LrO5u5wTWyEAVVh+IT39G4gtyAkh3CtTZs8aX/yRM82OfzHJRg==
   dependencies:
     undici-types "~7.16.0"
 
@@ -1605,9 +1605,9 @@ balanced-match@^1.0.0:
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
 
 baseline-browser-mapping@^2.9.0:
-  version "2.9.16"
-  resolved "https://registry.yarnpkg.com/baseline-browser-mapping/-/baseline-browser-mapping-2.9.16.tgz#da1e893fd13aa6e8b6349b64b06399a0644c14b5"
-  integrity sha512-KeUZdBuxngy825i8xvzaK1Ncnkx0tBmb3k8DkEuqjKRkmtvNTjey2ZsNeh8Dw4lfKvbCOu9oeNx2TKm2vHqcRw==
+  version "2.9.17"
+  resolved "https://registry.yarnpkg.com/baseline-browser-mapping/-/baseline-browser-mapping-2.9.17.tgz#9d6019766cd7eba738cb5f32c84b9f937cc87780"
+  integrity sha512-agD0MgJFUP/4nvjqzIB29zRPUuCF7Ge6mEv9s8dHrtYD7QWXRcx75rOADE/d5ah1NI+0vkDl0yorDd5U852IQQ==
 
 before-after-hook@^2.2.0:
   version "2.2.3"
@@ -4410,10 +4410,10 @@ prettier-linter-helpers@^1.0.1:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@^3.8.0:
-  version "3.8.0"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.8.0.tgz#f72cf71505133f40cfa2ef77a2668cdc558fcd69"
-  integrity sha512-yEPsovQfpxYfgWNhCfECjG5AQaO+K3dp6XERmOepyPDVqcJm+bjyCVO3pmU+nAPe0N5dDvekfGezt/EIiRe1TA==
+prettier@^3.8.1:
+  version "3.8.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.8.1.tgz#edf48977cf991558f4fcbd8a3ba6015ba2a3a173"
+  integrity sha512-UOnG6LftzbdaHZcKoPFtOcCKztrQ57WkHDeRD9t/PTQtmT0NHSeWWepj6pS0z/N7+08BHFDQVUrfmfMRcZwbMg==
 
 pretty-format@^29.0.0, pretty-format@^29.7.0:
   version "29.7.0"
