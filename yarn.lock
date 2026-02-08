@@ -43,18 +43,18 @@
   resolved "https://registry.yarnpkg.com/@actions/io/-/io-1.1.3.tgz#4cdb6254da7962b07473ff5c335f3da485d94d71"
   integrity sha512-wi9JjgKLYS7U/z8PPbco+PvTb/nRWjeoFlJ1Qer83k/3C5PHQi28hiVdeE2kHXmIL99mQFawx8qt/JPjZilJ8Q==
 
-"@aws-cdk/aws-service-spec@^0.1.148":
-  version "0.1.148"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-service-spec/-/aws-service-spec-0.1.148.tgz#f80bb4091b6dc5904be2c5950b8253e3c56ca17d"
-  integrity sha512-UkEh6yl5VruBg4r0sIV4S5jvhA+jm3vlZFeBjGfWjCdSEsOWTzK7Lhbg6+cjf35uGvNCSVdMbHC6g7tiuhSKYQ==
+"@aws-cdk/aws-service-spec@^0.1.149":
+  version "0.1.149"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-service-spec/-/aws-service-spec-0.1.149.tgz#ee98785822525f468ccd4b28f6f7f93a71dc34c9"
+  integrity sha512-Z1Qrba4V9FgljtX6jRV1hpP9siWrhEIGuuuJffe7enRWzUGVTbvVXaRHYRmoFG8oYH42xTjlVPyQcT0xwZ0ytA==
   dependencies:
-    "@aws-cdk/service-spec-types" "^0.0.214"
+    "@aws-cdk/service-spec-types" "^0.0.215"
     "@cdklabs/tskb" "^0.0.4"
 
-"@aws-cdk/service-spec-types@^0.0.214":
-  version "0.0.214"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/service-spec-types/-/service-spec-types-0.0.214.tgz#88456be638b2541b195f4573d70cc4293eb8d2f6"
-  integrity sha512-mVAnTNSd+iooBSwnCB6xzlu9pqqXlrpwzSPVigk3JImXQlzIkMf1Kx14Td3ybUNRJdmvf5bnJN3xBI6H3V54pg==
+"@aws-cdk/service-spec-types@^0.0.215":
+  version "0.0.215"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/service-spec-types/-/service-spec-types-0.0.215.tgz#85df7059d69a67d082a01e8222a0a14de11dc33d"
+  integrity sha512-1ooyXpTahQ8FlTtKriEmMKk81sQ3NZP82DoEGv5RAZ8wT5Dycv2Bkso57A+/gLJQ6vi7+Gwg07l/6JbfX1bPAQ==
   dependencies:
     "@cdklabs/tskb" "^0.0.4"
 
@@ -1112,9 +1112,9 @@
   integrity sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==
 
 "@types/node@*":
-  version "25.2.1"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-25.2.1.tgz#378021f9e765bb65ba36de16f3c3a8622c1fa03d"
-  integrity sha512-CPrnr8voK8vC6eEtyRzvMpgp3VyVRhgclonE7qYi6P9sXwYb59ucfrnmFBTaP0yUi8Gk4yZg/LlTJULGxvTNsg==
+  version "25.2.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-25.2.2.tgz#0ddfe326c326afcb3422d32bfe5eb2938e1cb5db"
+  integrity sha512-BkmoP5/FhRYek5izySdkOneRyXYN35I860MFAGupTdebyE66uZaR+bXLHq8k4DirE5DwQi3NuhvRU1jqTVwUrQ==
   dependencies:
     undici-types "~7.16.0"
 
