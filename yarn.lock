@@ -43,18 +43,18 @@
   resolved "https://registry.yarnpkg.com/@actions/io/-/io-1.1.3.tgz#4cdb6254da7962b07473ff5c335f3da485d94d71"
   integrity sha512-wi9JjgKLYS7U/z8PPbco+PvTb/nRWjeoFlJ1Qer83k/3C5PHQi28hiVdeE2kHXmIL99mQFawx8qt/JPjZilJ8Q==
 
-"@aws-cdk/aws-service-spec@^0.1.156":
-  version "0.1.156"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-service-spec/-/aws-service-spec-0.1.156.tgz#a19ffd5c57cbb52f3ac070b3537c4792be894861"
-  integrity sha512-0AmTGMmywPCdOnr5vzCBlHewT5Rjd8onupd0NO1LfxiIyYTqP9FVCIsXivEteRTaM0sywDbR9H5FJGiOsQQYCw==
+"@aws-cdk/aws-service-spec@^0.1.157":
+  version "0.1.157"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-service-spec/-/aws-service-spec-0.1.157.tgz#28ff21f280e5a7f1eb34a1afc04766100a0a7aba"
+  integrity sha512-fLJ+P0CffrFgq/JqMfou8FdqMSjU+OFasC2RDL6/PzgaaP6RGo2QWV0qFIJ/zPFGKbwaXeDdk5F7zSOJnwGnbQ==
   dependencies:
-    "@aws-cdk/service-spec-types" "^0.0.222"
+    "@aws-cdk/service-spec-types" "^0.0.223"
     "@cdklabs/tskb" "^0.0.4"
 
-"@aws-cdk/service-spec-types@^0.0.222":
-  version "0.0.222"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/service-spec-types/-/service-spec-types-0.0.222.tgz#3d2eba5cad62a8b351803991990aa9ad27d82010"
-  integrity sha512-vSl0J/CaqXOlu8fe/f4q+7XVVbdPMGw1w2Ep2Ryy4tzcSwR9wAKNzgR1JIOHu9ozN9ei3zpWIt134+hNHkuFMg==
+"@aws-cdk/service-spec-types@^0.0.223":
+  version "0.0.223"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/service-spec-types/-/service-spec-types-0.0.223.tgz#04bca9050e39d1ef7e7ac1864316b63212941d80"
+  integrity sha512-n7IE0cA1t4zoLKcgQIfRTwcEMlA5uvErEE3icC94t2PQuNC3PfI5m5ALqAlfcfaPUdhI8PSLXvB/jA1WS3zG1A==
   dependencies:
     "@cdklabs/tskb" "^0.0.4"
 
@@ -1628,9 +1628,9 @@ brace-expansion@^1.1.7:
     concat-map "0.0.1"
 
 brace-expansion@^5.0.2:
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-5.0.3.tgz#6a9c6c268f85b53959ec527aeafe0f7300258eef"
-  integrity sha512-fy6KJm2RawA5RcHkLa1z/ScpBeA762UF9KmZQxwIbDtRJrgLzM10depAiEQ+CXYcoiqW1/m96OAAoke2nE9EeA==
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-5.0.4.tgz#614daaecd0a688f660bbbc909a8748c3d80d4336"
+  integrity sha512-h+DEnpVvxmfVefa4jFbCf5HdH5YMDXRsmKflpf1pILZWRFlTbJpxeU55nJl4Smt5HQaGzg1o6RHFPJaOqnmBDg==
   dependencies:
     balanced-match "^4.0.2"
 
