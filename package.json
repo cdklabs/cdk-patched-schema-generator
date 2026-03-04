@@ -51,7 +51,7 @@
     "@cdklabs/typewriter": "^0.0.16",
     "@octokit/graphql": "^8.2.2",
     "@octokit/rest": "^20.1.2",
-    "fs-extra": "^11.3.3"
+    "fs-extra": "^11.3.4"
   },
   "main": "lib/index.js",
   "license": "Apache-2.0",
