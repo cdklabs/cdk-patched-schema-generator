@@ -43,18 +43,18 @@
   resolved "https://registry.yarnpkg.com/@actions/io/-/io-1.1.3.tgz#4cdb6254da7962b07473ff5c335f3da485d94d71"
   integrity sha512-wi9JjgKLYS7U/z8PPbco+PvTb/nRWjeoFlJ1Qer83k/3C5PHQi28hiVdeE2kHXmIL99mQFawx8qt/JPjZilJ8Q==
 
-"@aws-cdk/aws-service-spec@^0.1.158":
-  version "0.1.158"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-service-spec/-/aws-service-spec-0.1.158.tgz#a56668207c08b5a7eb560cf1ac3efd0c484e2891"
-  integrity sha512-lzqqZgJfm+iR+pDZ6t4PijTcvSZ0w1LC9u2eAxf3p9ACSXj00fn/3yDF/trIOVNbUNz2yzRHJFy3Ob4D6JXvxg==
+"@aws-cdk/aws-service-spec@^0.1.159":
+  version "0.1.159"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-service-spec/-/aws-service-spec-0.1.159.tgz#24c19554e7b65008c61fdc88a1778f8a9ad411a9"
+  integrity sha512-IgdIOREfGNWwSac1Y2XpsP8WL9CkoolS2ixfGC3VJFDifkni5rmc+ADeFuD+egujAnjHUIz7MZP/67gIHru3mA==
   dependencies:
-    "@aws-cdk/service-spec-types" "^0.0.224"
+    "@aws-cdk/service-spec-types" "^0.0.225"
     "@cdklabs/tskb" "^0.0.4"
 
-"@aws-cdk/service-spec-types@^0.0.224":
-  version "0.0.224"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/service-spec-types/-/service-spec-types-0.0.224.tgz#cde354ff25c0d4c6a30fbcab6ef29ffdc7b00c54"
-  integrity sha512-yQu2EnQvMihN3zcLhKaS0R72yXw1nCcoOZppCrR9SC1PLwlUarlomS3IEgbcUzMUYuet7prwVlBy8oz+1BPRLA==
+"@aws-cdk/service-spec-types@^0.0.225":
+  version "0.0.225"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/service-spec-types/-/service-spec-types-0.0.225.tgz#ee0648db07b4a3a3585f9d4d2987e2c9dd1180b6"
+  integrity sha512-y7+D/NwFxzopYB4jlSH+ES/p8OyI4JWZIMPjE20RFCWdWRNukxevGPCSM5T6YS0eWHjLUIECaMhOqVLyyFemvQ==
   dependencies:
     "@cdklabs/tskb" "^0.0.4"
 
@@ -4108,9 +4108,9 @@ node-int64@^0.4.0:
   integrity sha512-O5lz91xSOeoXP6DulyHfllpq+Eg00MWitZIbtPfoSEvqIHdl5gfcY6hYzDWnj0qD5tz52PI08u9qUvSVeUBeHw==
 
 node-releases@^2.0.27:
-  version "2.0.27"
-  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.27.tgz#eedca519205cf20f650f61d56b070db111231e4e"
-  integrity sha512-nmh3lCkYZ3grZvqcCH+fjmQ7X+H0OeZgP40OierEaAptX4XofMh5kwNbWh7lBduUzCcV/8kZ+NDLCwm2iorIlA==
+  version "2.0.36"
+  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.36.tgz#99fd6552aaeda9e17c4713b57a63964a2e325e9d"
+  integrity sha512-TdC8FSgHz8Mwtw9g5L4gR/Sh9XhSP/0DEkQxfEFXOpiul5IiHgHan2VhYYb6agDSfp4KuvltmGApc8HMgUrIkA==
 
 normalize-package-data@^2.3.2, normalize-package-data@^2.5.0:
   version "2.5.0"
