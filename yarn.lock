@@ -43,18 +43,18 @@
   resolved "https://registry.yarnpkg.com/@actions/io/-/io-1.1.3.tgz#4cdb6254da7962b07473ff5c335f3da485d94d71"
   integrity sha512-wi9JjgKLYS7U/z8PPbco+PvTb/nRWjeoFlJ1Qer83k/3C5PHQi28hiVdeE2kHXmIL99mQFawx8qt/JPjZilJ8Q==
 
-"@aws-cdk/aws-service-spec@^0.1.162":
-  version "0.1.162"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-service-spec/-/aws-service-spec-0.1.162.tgz#e387f9c5599f8294f0791287aeb2f0fac1b47e53"
-  integrity sha512-O5O3AY/AbopVVRAb7UjOcngY2c10wejJ/c040hYFGH5wxYo9KoSN5sSbe1ht5dUTnQluxPZ7s1l72gr/9V43QA==
+"@aws-cdk/aws-service-spec@^0.1.163":
+  version "0.1.163"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-service-spec/-/aws-service-spec-0.1.163.tgz#c6786c9a6b21c4f1a815ff952acb63c9046f0748"
+  integrity sha512-5hQi+cpg992vc1TDXp9IcAM7dD2JUrxIrSFo0x5ZydHeNTa8Jx6L1dnsEaOB2Sao7UPG9NOFjvJB2S6T2r0HWQ==
   dependencies:
-    "@aws-cdk/service-spec-types" "^0.0.228"
+    "@aws-cdk/service-spec-types" "^0.0.229"
     "@cdklabs/tskb" "^0.0.4"
 
-"@aws-cdk/service-spec-types@^0.0.228":
-  version "0.0.228"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/service-spec-types/-/service-spec-types-0.0.228.tgz#54fa396d63bc47da3900f6da26cedbdfd81ec50b"
-  integrity sha512-RUtzUV2rn2Vq5S2MChNU66tBnt5DLCBu7L9g/D1NEMet2ue6HuVgUZG3Iwhc/9NQPM27pVmRcj+E6l4JOSzApA==
+"@aws-cdk/service-spec-types@^0.0.229":
+  version "0.0.229"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/service-spec-types/-/service-spec-types-0.0.229.tgz#6110bb161877d4307317e2eb68406304ed90db45"
+  integrity sha512-GnZVzddpKqFbPu/ws+hq3V6OkKG5wV2ViXkb3qeJZ1bE6Lnncf2n21prp5Du5dZxyKmg6RePpWdCmmSjVCWv9Q==
   dependencies:
     "@cdklabs/tskb" "^0.0.4"
 
@@ -1610,9 +1610,9 @@ balanced-match@^4.0.2:
   integrity sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA==
 
 baseline-browser-mapping@^2.9.0:
-  version "2.10.7"
-  resolved "https://registry.yarnpkg.com/baseline-browser-mapping/-/baseline-browser-mapping-2.10.7.tgz#2c017adffe4f7bbe93c2e55526cc1869d36f588c"
-  integrity sha512-1ghYO3HnxGec0TCGBXiDLVns4eCSx4zJpxnHrlqFQajmhfKMQBzUGDdkMK7fUW7PTHTeLf+j87aTuKuuwWzMGw==
+  version "2.10.8"
+  resolved "https://registry.yarnpkg.com/baseline-browser-mapping/-/baseline-browser-mapping-2.10.8.tgz#23d1cea1a85b181c2b8660b6cfe626dc2fb15630"
+  integrity sha512-PCLz/LXGBsNTErbtB6i5u4eLpHeMfi93aUv5duMmj6caNu6IphS4q6UevDnL36sZQv9lrP11dbPKGMaXPwMKfQ==
 
 before-after-hook@^2.2.0:
   version "2.2.3"
@@ -1722,9 +1722,9 @@ camelcase@^6.2.0:
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
 caniuse-lite@^1.0.30001759:
-  version "1.0.30001778"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001778.tgz#79a8a124e3473a20b70616497b987c30d06570a0"
-  integrity sha512-PN7uxFL+ExFJO61aVmP1aIEG4i9whQd4eoSCebav62UwDyp5OHh06zN4jqKSMePVgxHifCw1QJxdRkA1Pisekg==
+  version "1.0.30001779"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001779.tgz#75e4941d406928ba00c8d7a3ddda0b2cb90d7474"
+  integrity sha512-U5og2PN7V4DMgF50YPNtnZJGWVLFjjsN3zb6uMT5VGYIewieDj1upwfuVNXf4Kor+89c3iCRJnSzMD5LmTvsfA==
 
 case@^1.6.3:
   version "1.6.3"
@@ -4458,10 +4458,10 @@ projen-github-action-typescript@^0.0.514:
   resolved "https://registry.yarnpkg.com/projen-github-action-typescript/-/projen-github-action-typescript-0.0.514.tgz#c0286a383aac7fc2a9bb0b8260252b79e70be3a2"
   integrity sha512-7DcemXYrvkRSYY+iXgQCHdWXxLbfmTDlpGyxciM0WrOStZ4ymDkTnjkz66SyuGZU/E7EMxMy2b4SruYls5svZg==
 
-projen@^0.99.19:
-  version "0.99.19"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.99.19.tgz#2d06440e3576068ddb45a41d4b29e7491dda719a"
-  integrity sha512-svJ6f3SV3ZMUy77CXmLbjhBFnHnqSg9XXByzF8MYdrLeCED/or9v26//HurYQQm/awtR1SN5Kwn9DYP5aXzXhg==
+projen@^0.99.20:
+  version "0.99.20"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.99.20.tgz#80fece27076b3d00b49b46e27f08539f96951b82"
+  integrity sha512-mK3s7G3JgeUdy2+7d3p3h/05AigbgKXvFpz8ud7Fj4XpZ2UTiKJQ+fDl29nAxIW0AnVQUQN6UfvqZGibWxni/g==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
