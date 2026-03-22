@@ -43,18 +43,18 @@
   resolved "https://registry.yarnpkg.com/@actions/io/-/io-1.1.3.tgz#4cdb6254da7962b07473ff5c335f3da485d94d71"
   integrity sha512-wi9JjgKLYS7U/z8PPbco+PvTb/nRWjeoFlJ1Qer83k/3C5PHQi28hiVdeE2kHXmIL99mQFawx8qt/JPjZilJ8Q==
 
-"@aws-cdk/aws-service-spec@^0.1.164":
-  version "0.1.164"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-service-spec/-/aws-service-spec-0.1.164.tgz#2d47cdcc8864adfe91b2e15e089468635d05a721"
-  integrity sha512-jCCxSb2KeU/GRS+34yOwumCJVgW1TpkUmwvH2BpGQpf5pe2gWnL+oIkgP5Ghbpri1ZSo8tbMQ5pa27qVUafmGw==
+"@aws-cdk/aws-service-spec@^0.1.165":
+  version "0.1.165"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-service-spec/-/aws-service-spec-0.1.165.tgz#e02c8489a6569d188fab27fa47465fb168341d1f"
+  integrity sha512-nATIfN28M9hQa262Jum1OWCSvLbkCQhNe8tuz89K4zmTWUUnJd2EvelL51t8NbShFvviJvydi87S/n60yjxRtg==
   dependencies:
-    "@aws-cdk/service-spec-types" "^0.0.230"
+    "@aws-cdk/service-spec-types" "^0.0.231"
     "@cdklabs/tskb" "^0.0.4"
 
-"@aws-cdk/service-spec-types@^0.0.230":
-  version "0.0.230"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/service-spec-types/-/service-spec-types-0.0.230.tgz#84e33a78d0e202d2631be3f6a847e002f14dad7a"
-  integrity sha512-XtsvTk8b1urn1KTG/AgFX+f00Pz+8h+oJ7LpLhr/mlbkh2XFtHVdbGjdhNKEAFB6RPBcufqovm9cQJc0PKrZwQ==
+"@aws-cdk/service-spec-types@^0.0.231":
+  version "0.0.231"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/service-spec-types/-/service-spec-types-0.0.231.tgz#cd173c33a99a712503c2314ebef7946d60ac3ca4"
+  integrity sha512-vPnG3XDIAf0HwMEkNzepkUJcrbHaEEwekztCVwsu3FPhf8T7TMRTXC5DOYM0v6y/pOjnt8KHi5EeTrEpfAj9vw==
   dependencies:
     "@cdklabs/tskb" "^0.0.4"
 
@@ -1610,9 +1610,9 @@ balanced-match@^4.0.2:
   integrity sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA==
 
 baseline-browser-mapping@^2.9.0:
-  version "2.10.9"
-  resolved "https://registry.yarnpkg.com/baseline-browser-mapping/-/baseline-browser-mapping-2.10.9.tgz#8614229add633061c001a0b7c7c85d4b7c44e6ca"
-  integrity sha512-OZd0e2mU11ClX8+IdXe3r0dbqMEznRiT4TfbhYIbcRPZkqJ7Qwer8ij3GZAmLsRKa+II9V1v5czCkvmHH3XZBg==
+  version "2.10.10"
+  resolved "https://registry.yarnpkg.com/baseline-browser-mapping/-/baseline-browser-mapping-2.10.10.tgz#e74bd066724c1d8d7d8ea75fc3be25389a7a5c56"
+  integrity sha512-sUoJ3IMxx4AyRqO4MLeHlnGDkyXRoUG0/AI9fjK+vS72ekpV0yWVY7O0BVjmBcRtkNcsAO2QDZ4tdKKGoI6YaQ==
 
 before-after-hook@^2.2.0:
   version "2.2.3"
@@ -5542,9 +5542,9 @@ yallist@^4.0.0:
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
 
 yaml@^2.2.2, yaml@^2.6.0:
-  version "2.8.2"
-  resolved "https://registry.yarnpkg.com/yaml/-/yaml-2.8.2.tgz#5694f25eca0ce9c3e7a9d9e00ce0ddabbd9e35c5"
-  integrity sha512-mplynKqc1C2hTVYxd0PU2xQAc22TI1vShAYGksCCfxbn/dFwnHTNi1bvYsBTkhdUNtGIf5xNOg938rrSSYvS9A==
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/yaml/-/yaml-2.8.3.tgz#a0d6bd2efb3dd03c59370223701834e60409bd7d"
+  integrity sha512-AvbaCLOO2Otw/lW5bmh9d/WEdcDFdQp2Z2ZUH3pX9U2ihyUY0nvLv7J6TrWowklRGPYbB/IuIMfYgxaCPg5Bpg==
 
 yargs-parser@^20.2.2, yargs-parser@^20.2.3:
   version "20.2.9"
