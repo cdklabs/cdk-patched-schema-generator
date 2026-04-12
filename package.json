@@ -46,8 +46,8 @@
   "dependencies": {
     "@actions/core": "^1.11.1",
     "@actions/github": "^6.0.1",
-    "@aws-cdk/aws-service-spec": "^0.1.171",
-    "@aws-cdk/service-spec-types": "^0.0.237",
+    "@aws-cdk/aws-service-spec": "^0.1.172",
+    "@aws-cdk/service-spec-types": "^0.0.238",
     "@cdklabs/typewriter": "^0.0.16",
     "@octokit/graphql": "^8.2.2",
     "@octokit/rest": "^20.1.2",
