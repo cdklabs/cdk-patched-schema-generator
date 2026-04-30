@@ -43,18 +43,18 @@
   resolved "https://registry.yarnpkg.com/@actions/io/-/io-1.1.3.tgz#4cdb6254da7962b07473ff5c335f3da485d94d71"
   integrity sha512-wi9JjgKLYS7U/z8PPbco+PvTb/nRWjeoFlJ1Qer83k/3C5PHQi28hiVdeE2kHXmIL99mQFawx8qt/JPjZilJ8Q==
 
-"@aws-cdk/aws-service-spec@^0.1.176":
-  version "0.1.176"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-service-spec/-/aws-service-spec-0.1.176.tgz#d410efe94f10c2509c11998476a9a716593caf2e"
-  integrity sha512-0VoXqmz4SLwXj8Bc2wmxIGWS+vZrapbXMM4DJwNcQ/kk8Ep6nfHiHblyXO3GPs4IaBROIj5CWv2ahM1Kc8lj3w==
+"@aws-cdk/aws-service-spec@^0.1.177":
+  version "0.1.177"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-service-spec/-/aws-service-spec-0.1.177.tgz#05b3d495abcfadf8c934aac8a8dcd564f0c03add"
+  integrity sha512-js46kWGKzXp8s4utyXYNU7a81tWL6K222dACyYxsRmIHMDQ3W+U/LqDIuk349O7WTGk4sIzIqYA190A9ipv1Zw==
   dependencies:
-    "@aws-cdk/service-spec-types" "^0.0.242"
+    "@aws-cdk/service-spec-types" "^0.0.243"
     "@cdklabs/tskb" "^0.0.4"
 
-"@aws-cdk/service-spec-types@^0.0.242":
-  version "0.0.242"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/service-spec-types/-/service-spec-types-0.0.242.tgz#ee794335c36464f311af9c20960a19d69a248b04"
-  integrity sha512-CU/aTTbSwcfTRHx0VPeSnzFl2K6KoaAKMIZIfkowpPwHBt3VeZIWorXbjQHbJG6+3eVfhrV9OO7YHjOooqAlWA==
+"@aws-cdk/service-spec-types@^0.0.243":
+  version "0.0.243"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/service-spec-types/-/service-spec-types-0.0.243.tgz#b4fc6971c61c20b0f1859abcc4e5805ccb5fdadf"
+  integrity sha512-l+4XKBNlGf8CdfqbzkSRRHKZqlf/peYwx2jin0Wr8fS5e0wceHiGLlE0zUxaOwPF5tLtso79p6/IzDXXXIJkGQ==
   dependencies:
     "@cdklabs/tskb" "^0.0.4"
 
