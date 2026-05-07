@@ -9038,14 +9038,14 @@ const { areIdentical } = __nccwpck_require__(887)
 async function createLink (srcpath, dstpath) {
   let dstStat
   try {
-    dstStat = await fs.lstat(dstpath)
+    dstStat = await fs.lstat(dstpath, { bigint: true })
   } catch {
     // ignore error
   }
 
   let srcStat
   try {
-    srcStat = await fs.lstat(srcpath)
+    srcStat = await fs.lstat(srcpath, { bigint: true })
   } catch (err) {
     err.message = err.message.replace('lstat', 'ensureLink')
     throw err
@@ -9067,11 +9067,11 @@ async function createLink (srcpath, dstpath) {
 function createLinkSync (srcpath, dstpath) {
   let dstStat
   try {
-    dstStat = fs.lstatSync(dstpath)
+    dstStat = fs.lstatSync(dstpath, { bigint: true })
   } catch {}
 
   try {
-    const srcStat = fs.lstatSync(srcpath)
+    const srcStat = fs.lstatSync(srcpath, { bigint: true })
     if (dstStat && areIdentical(srcStat, dstStat)) return
   } catch (err) {
     err.message = err.message.replace('lstat', 'ensureLink')
@@ -9275,18 +9275,18 @@ async function createSymlink (srcpath, dstpath, type) {
     // (standard symlink behavior) or fall back to cwd if that doesn't exist
     let srcStat
     if (path.isAbsolute(srcpath)) {
-      srcStat = await fs.stat(srcpath)
+      srcStat = await fs.stat(srcpath, { bigint: true })
     } else {
       const dstdir = path.dirname(dstpath)
       const relativeToDst = path.join(dstdir, srcpath)
       try {
-        srcStat = await fs.stat(relativeToDst)
+        srcStat = await fs.stat(relativeToDst, { bigint: true })
       } catch {
-        srcStat = await fs.stat(srcpath)
+        srcStat = await fs.stat(srcpath, { bigint: true })
       }
     }
 
-    const dstStat = await fs.stat(dstpath)
+    const dstStat = await fs.stat(dstpath, { bigint: true })
     if (areIdentical(srcStat, dstStat)) return
   }
 
@@ -9312,18 +9312,18 @@ function createSymlinkSync (srcpath, dstpath, type) {
     // (standard symlink behavior) or fall back to cwd if that doesn't exist
     let srcStat
     if (path.isAbsolute(srcpath)) {
-      srcStat = fs.statSync(srcpath)
+      srcStat = fs.statSync(srcpath, { bigint: true })
     } else {
       const dstdir = path.dirname(dstpath)
       const relativeToDst = path.join(dstdir, srcpath)
       try {
-        srcStat = fs.statSync(relativeToDst)
+        srcStat = fs.statSync(relativeToDst, { bigint: true })
       } catch {
-        srcStat = fs.statSync(srcpath)
+        srcStat = fs.statSync(srcpath, { bigint: true })
       }
     }
 
-    const dstStat = fs.statSync(dstpath)
+    const dstStat = fs.statSync(dstpath, { bigint: true })
     if (areIdentical(srcStat, dstStat)) return
   }
 
@@ -10135,30 +10135,47 @@ const fs = __nccwpck_require__(3506)
 const u = (__nccwpck_require__(5077).fromPromise)
 
 async function utimesMillis (path, atime, mtime) {
-  // if (!HAS_MILLIS_RES) return fs.utimes(path, atime, mtime, callback)
   const fd = await fs.open(path, 'r+')
 
-  let closeErr = null
+  let error = null
 
   try {
     await fs.futimes(fd, atime, mtime)
+  } catch (futimesErr) {
+    error = futimesErr
   } finally {
     try {
       await fs.close(fd)
-    } catch (e) {
-      closeErr = e
+    } catch (closeErr) {
+      if (!error) error = closeErr
     }
   }
 
-  if (closeErr) {
-    throw closeErr
+  if (error) {
+    throw error
   }
 }
 
 function utimesMillisSync (path, atime, mtime) {
   const fd = fs.openSync(path, 'r+')
-  fs.futimesSync(fd, atime, mtime)
-  return fs.closeSync(fd)
+
+  let error = null
+
+  try {
+    fs.futimesSync(fd, atime, mtime)
+  } catch (futimesErr) {
+    error = futimesErr
+  } finally {
+    try {
+      fs.closeSync(fd)
+    } catch (closeErr) {
+      if (!error) error = closeErr
+    }
+  }
+
+  if (error) {
+    throw error
+  }
 }
 
 module.exports = {
