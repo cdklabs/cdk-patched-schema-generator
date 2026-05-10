@@ -43,18 +43,18 @@
   resolved "https://registry.yarnpkg.com/@actions/io/-/io-1.1.3.tgz#4cdb6254da7962b07473ff5c335f3da485d94d71"
   integrity sha512-wi9JjgKLYS7U/z8PPbco+PvTb/nRWjeoFlJ1Qer83k/3C5PHQi28hiVdeE2kHXmIL99mQFawx8qt/JPjZilJ8Q==
 
-"@aws-cdk/aws-service-spec@^0.1.179":
-  version "0.1.179"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-service-spec/-/aws-service-spec-0.1.179.tgz#0492b0a954e57a41f2a6fc06cf8bb9a7771b2f33"
-  integrity sha512-jlP//NC1WOMqH7iWHY43tzFVtP19gAPr9cLzYeWLTkAkLKKYcvbFb/ud6NKgakTwBT7tE5GSqsp8WtwGBVK8Pw==
+"@aws-cdk/aws-service-spec@^0.1.180":
+  version "0.1.180"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-service-spec/-/aws-service-spec-0.1.180.tgz#bcd297aa604de708919930a7a76b584adb672d94"
+  integrity sha512-Vt3dDKaPnPHWPHF2NKhm81BINarQR2u6zaumhqOBs2Ci3KfTr6jjnOCUJ8pk1a4QQp1M1pU+kpX6yGS9/AsQUw==
   dependencies:
-    "@aws-cdk/service-spec-types" "^0.0.245"
+    "@aws-cdk/service-spec-types" "^0.0.246"
     "@cdklabs/tskb" "^0.0.4"
 
-"@aws-cdk/service-spec-types@^0.0.245":
-  version "0.0.245"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/service-spec-types/-/service-spec-types-0.0.245.tgz#a1850609767c88ae263cdc098f203cea4bceda74"
-  integrity sha512-fq3TUPEzxYyjwsNXdX9frLVT9mBa9qKWnc25uIXpO8dhCcwuC2HfjU27YlQx+sgxWgfxAM+M39F/5odVIqJQ1w==
+"@aws-cdk/service-spec-types@^0.0.246":
+  version "0.0.246"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/service-spec-types/-/service-spec-types-0.0.246.tgz#6d0ea245dbd05cfe01f47d6d46dfd2fb393eb594"
+  integrity sha512-xFjzqnFo5gZv0cXXhOLhm0O3z9/dAcL2vnmVYtcQjEyeVDzD59JsEEICshEsdmhgxml1CcjkKNRjDHw9ex5IEQ==
   dependencies:
     "@cdklabs/tskb" "^0.0.4"
 
@@ -1623,9 +1623,9 @@ balanced-match@^4.0.2:
   integrity sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA==
 
 baseline-browser-mapping@^2.10.12:
-  version "2.10.28"
-  resolved "https://registry.yarnpkg.com/baseline-browser-mapping/-/baseline-browser-mapping-2.10.28.tgz#9ba8e7b5ef9d40ceb3dd1cdcb936f63383b6833b"
-  integrity sha512-Ic44hnOtFIgravCunj1ifSoQPSUrkNiJuH9Mf6jr2jjoA74icqV8wU0KuadXeOR8zuIJMOoTv0GuQjZ9ZYNMeA==
+  version "2.10.29"
+  resolved "https://registry.yarnpkg.com/baseline-browser-mapping/-/baseline-browser-mapping-2.10.29.tgz#47bdc13027af28d341f367a4f35a07ce872e27b4"
+  integrity sha512-Asa2krT+XTPZINCS+2QcyS8WTkObE77RwkydwF7h6DmnKqbvlalz93m/dnphUyCa6SWSP51VgtEUf2FN+gelFQ==
 
 before-after-hook@^2.2.0:
   version "2.2.3"
