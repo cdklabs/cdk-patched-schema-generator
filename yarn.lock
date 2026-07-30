@@ -43,18 +43,18 @@
   resolved "https://registry.yarnpkg.com/@actions/io/-/io-1.1.3.tgz#4cdb6254da7962b07473ff5c335f3da485d94d71"
   integrity sha512-wi9JjgKLYS7U/z8PPbco+PvTb/nRWjeoFlJ1Qer83k/3C5PHQi28hiVdeE2kHXmIL99mQFawx8qt/JPjZilJ8Q==
 
-"@aws-cdk/aws-service-spec@^0.1.197":
-  version "0.1.197"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-service-spec/-/aws-service-spec-0.1.197.tgz#351d2689b10cffe6c49c0972043a40b6ad398cde"
-  integrity sha512-tHui+ddQKJ5fZURMe79dLGEPRcKRdAvKVNgWM0N9UFCZz40vewPisSabO9Sabc7TeW7r5E8N6zDsVwZY8QJmJw==
+"@aws-cdk/aws-service-spec@^0.1.199":
+  version "0.1.199"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-service-spec/-/aws-service-spec-0.1.199.tgz#013aa7ff0a2ae63588bdc244070e3c3cba0713e9"
+  integrity sha512-g6/7x15nVNPrexCe6rOV0h96L+7Wf2kQizZvh4JulmcwTcwiNEjJXi1UVNZFmChmNzJYsB3sMykJzB68+7i31g==
   dependencies:
-    "@aws-cdk/service-spec-types" "^0.0.263"
+    "@aws-cdk/service-spec-types" "^0.0.265"
     "@cdklabs/tskb" "^0.0.4"
 
-"@aws-cdk/service-spec-types@^0.0.263":
-  version "0.0.263"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/service-spec-types/-/service-spec-types-0.0.263.tgz#ceba6ab93a59fd40b6ad7500ab4ba892c0ec74a5"
-  integrity sha512-9EKUO60lnl+KyEXMfhnXakT780IZFKHTGftGt3jYXojAT2jz++TBPx9v02RHNKby/GuX4GCTt2gbaK1EYjP7Vw==
+"@aws-cdk/service-spec-types@^0.0.265":
+  version "0.0.265"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/service-spec-types/-/service-spec-types-0.0.265.tgz#3620f603b17311b4e2c7c00bfe3c667fc043321a"
+  integrity sha512-dFK0jfxz4QL6KTJxRypXT9C0wxVdbcGqZJ4TSTVyh4CtmM3ssYjJc0y9wrtsVPJgyTapWRoCYglhQrTVLQMCyA==
   dependencies:
     "@cdklabs/tskb" "^0.0.4"
 
@@ -1643,9 +1643,9 @@ balanced-match@^4.0.2:
   integrity sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA==
 
 baseline-browser-mapping@^2.10.44:
-  version "2.11.6"
-  resolved "https://registry.yarnpkg.com/baseline-browser-mapping/-/baseline-browser-mapping-2.11.6.tgz#56934c812026ae4fcdb039fc790a94b9a7d81d63"
-  integrity sha512-69D/imtToCsIcAl8WBS2YaRwA4jO/j0HhU+hELqMEu9f54MoUtI6+XH5mrKU8rEFNEk/Ui1I2MK4/JkWacclGw==
+  version "2.11.7"
+  resolved "https://registry.yarnpkg.com/baseline-browser-mapping/-/baseline-browser-mapping-2.11.7.tgz#65b41243f29d2cca7b5d72ca6e9b8285df1ed975"
+  integrity sha512-APw5YuIQAg6L9w4sHDI6j26DGFJI6RpYOhnkMPdC9lWbkKvsyPHzDsve1yd73lk21yz7Y09Kci8B2Pp9FonzWA==
 
 before-after-hook@^2.2.0:
   version "2.2.3"
@@ -1653,9 +1653,9 @@ before-after-hook@^2.2.0:
   integrity sha512-NzUnlZexiaH/46WDhANlyR2bXRopNg4F/zuSA3OpZnllCUgRaOF2znDioDWrmbNVsuZk6l9pMquQB38cfBZwkQ==
 
 brace-expansion@^1.1.7:
-  version "1.1.16"
-  resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.16.tgz#723d3a30c0558c225abc9fc479a73e14e26c3c2f"
-  integrity sha512-IDw48K2/2kRkg9LdJxurvq3lV3aBgq0REY89duEqFRthjlPdXHKMj7EnQOXVckxzgisinf3nHfrcE2FufFLXMw==
+  version "1.1.17"
+  resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.17.tgz#a375e14e41d672617de69526be02d0d7751a6909"
+  integrity sha512-w+aeW/mkgM4PyRMOJCgi3fOrTm5Q8QY1OSfn2TO2iuDj3ezIHqejmuxbjfPrqUkgqRew1iqkyAn0tr0ZwHD9+w==
   dependencies:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
@@ -1904,9 +1904,9 @@ concat-stream@^2.0.0:
     typedarray "^0.0.6"
 
 constructs@^10.0.0, constructs@^10.5.0:
-  version "10.7.1"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.7.1.tgz#2b759081732a4b8e4f728b78729b5601932df161"
-  integrity sha512-ulK25Sg2Nv1jW+A9VeV7fu9GFN9KdVTNWdXMoapNRwqkQzSdToro/Tttk3Ak5BGI80NRA/d2nSzKnoZ27LizLw==
+  version "10.7.2"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.7.2.tgz#871fccc7fe2c6037a5a2c8f01620ddb54b39e515"
+  integrity sha512-vA7JOqvO/xwq2HBCuq3qc6V2R9mHZCxJ8HPoucUcUWJY88YULe7bzMcsdBy27/gJJIphZi73U1oIXDY2Eqg6nA==
 
 conventional-changelog-angular@^6.0.0:
   version "6.0.0"
@@ -4481,10 +4481,10 @@ projen-github-action-typescript@^0.0.514:
   resolved "https://registry.yarnpkg.com/projen-github-action-typescript/-/projen-github-action-typescript-0.0.514.tgz#c0286a383aac7fc2a9bb0b8260252b79e70be3a2"
   integrity sha512-7DcemXYrvkRSYY+iXgQCHdWXxLbfmTDlpGyxciM0WrOStZ4ymDkTnjkz66SyuGZU/E7EMxMy2b4SruYls5svZg==
 
-projen@^0.101.21:
-  version "0.101.21"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.101.21.tgz#e3722bc7cb0910f27eeb88fe9b342246c387d9c5"
-  integrity sha512-VDJo1iE3f5BHXYKOU0pu6h1fyKozcfXMm1v+uxZMnBJXdDCLYplfPeGrvEOOhH3iJtmALvCaZd7+5qk1U8zRIQ==
+projen@^0.101.22:
+  version "0.101.22"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.101.22.tgz#3e9ed24de9f7e15d3065decc5500ec2a556bb69d"
+  integrity sha512-vkwwotCmEBUdkAj6hwnBD5qZ6mEZZaaUXS2pIu6TCvgASHkEte9gkWAk8/Pd8lVJUvfCgyjsP31f4PSuu280Vg==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
