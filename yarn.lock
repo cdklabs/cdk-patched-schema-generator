@@ -43,18 +43,18 @@
   resolved "https://registry.yarnpkg.com/@actions/io/-/io-1.1.3.tgz#4cdb6254da7962b07473ff5c335f3da485d94d71"
   integrity sha512-wi9JjgKLYS7U/z8PPbco+PvTb/nRWjeoFlJ1Qer83k/3C5PHQi28hiVdeE2kHXmIL99mQFawx8qt/JPjZilJ8Q==
 
-"@aws-cdk/aws-service-spec@^0.1.224":
-  version "0.1.224"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-service-spec/-/aws-service-spec-0.1.224.tgz#97a1aab0ac780e70abdbea1d7e8a0405312db307"
-  integrity sha512-42JREGrwQ7O5L21FsDeg9eH9DtiFam2//+5uNSZPglnYV8g8kOGB/RacTeo1X9HnzgTQqmN5PytqTHrhw+sKJg==
+"@aws-cdk/aws-service-spec@^0.1.225":
+  version "0.1.225"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-service-spec/-/aws-service-spec-0.1.225.tgz#adaf2e24c5510ff5614beb62852f85610fc0cda2"
+  integrity sha512-f9xd2Ctq9Vhq4ERinqNDpbNAEQT8RnkCi2CLVAu8TZu7yuFeprcGPaP36t0DF6hfDCnrNxPJXwQME2uaQbVdTw==
   dependencies:
-    "@aws-cdk/service-spec-types" "^0.0.290"
+    "@aws-cdk/service-spec-types" "^0.0.291"
     "@cdklabs/tskb" "^0.0.4"
 
-"@aws-cdk/service-spec-types@^0.0.290":
-  version "0.0.290"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/service-spec-types/-/service-spec-types-0.0.290.tgz#23b67762d7f525f198dc5971a43d3c3ca8b26d15"
-  integrity sha512-Kg/vCcowReaKpun5hpONuCLefu0wVveyTKI4vPrljuwv+J+D71NDAQEUqG39RYJFauiG3r46kgGzsi4ghc+7ew==
+"@aws-cdk/service-spec-types@^0.0.291":
+  version "0.0.291"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/service-spec-types/-/service-spec-types-0.0.291.tgz#941ff2ed95fcd8ecf85c0d9008262b4a2f5a1ee4"
+  integrity sha512-RPGda6w7zW9xt5YVxFqicriC7HI9wAyHevamc16nFuxb2M+ZBj6ubaWNzxARSgF+GO3W8vdr3eGWidu5qXhz4Q==
   dependencies:
     "@cdklabs/tskb" "^0.0.4"
 
@@ -1166,9 +1166,9 @@
     "@types/node" "*"
 
 "@types/node@*":
-  version "26.6.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-26.6.5.tgz#cb35209e7767c503551b5fa42a48231c7441d979"
-  integrity sha512-uMzsv9stDdofIZBx4UGh4Z9ZgXnGC9seRDscilBcTHAeOFk67MZg/k9bWVfO+bk4qZmG+l52hRnLwUiH2LnJTg==
+  version "26.6.6"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-26.6.6.tgz#9ed7b5817e728ed9216ef7c5b7d373fe3b777104"
+  integrity sha512-MzQj+8Kx3XI40OmUAE6Qoh58ZMNstNNMwn2nfd3qWsfe7nDNSqJNzes4njhz6AHwrSHOffSLwXU6yb474Q4aog==
   dependencies:
     undici-types "~8.9.0"
 
@@ -4079,10 +4079,10 @@ projen-github-action-typescript@^0.0.514:
   resolved "https://registry.yarnpkg.com/projen-github-action-typescript/-/projen-github-action-typescript-0.0.514.tgz#c0286a383aac7fc2a9bb0b8260252b79e70be3a2"
   integrity sha512-7DcemXYrvkRSYY+iXgQCHdWXxLbfmTDlpGyxciM0WrOStZ4ymDkTnjkz66SyuGZU/E7EMxMy2b4SruYls5svZg==
 
-projen@^0.104.17:
-  version "0.104.17"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.104.17.tgz#26dbf8b9131ff0df1d556945faf160be8fce8833"
-  integrity sha512-dZwmVMNaMAGH6mnoc8s7qcNM1o6++NwmCwTNhjoz7BumjdsNvIdTDE9RZGVP61JcSzLLwACNegaDugAAhqkA0A==
+projen@^0.104.19:
+  version "0.104.19"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.104.19.tgz#6a18c8e09b17dfeb701f457028cc5401bc358c42"
+  integrity sha512-XJQW4vTXMgTk5u8HFAlUrs8K14e+ujp4Zw2y6j7yjBXPe/st0WDnMyoTf+ArI910T9IcgfLA2fMG3fCTqSUEvQ==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
