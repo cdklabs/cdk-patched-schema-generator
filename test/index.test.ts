@@ -23,6 +23,19 @@ describe('Index', () => {
     jest.clearAllMocks();
   });
 
+  test('should run successfully when loaded as the action entry point', async () => {
+    await jest.isolateModulesAsync(async () => {
+      const isolatedCore = jest.mocked(await import('@actions/core'));
+      const isolatedFs = jest.mocked(await import('fs-extra'));
+      isolatedCore.getInput.mockReturnValue('/valid/path');
+
+      await import('../src/index');
+
+      expect(isolatedCore.setFailed).not.toHaveBeenCalled();
+      expect(isolatedFs.writeFileSync).toHaveBeenCalledTimes(2);
+    });
+  });
+
   test('should handle core.getInput error', () => {
     mockCore.getInput.mockImplementation(() => {
       throw new Error('Input error');

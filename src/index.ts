@@ -17,12 +17,6 @@ export function run() {
   writeFile(resources, `${outputPath}/${OUTPUT_FILES.resources}`);
 }
 
-try {
-  run();
-} catch (error: any) {
-  core.setFailed(error.message);
-}
-
 const validateOutputPath = (outputPath: string) => {
   if (!outputPath?.trim()) {
     throw new Error('output-path is required and cannot be empty');
@@ -57,3 +51,10 @@ const writeFile = (schema: any, outputPath: string) => {
     throw new Error(`Failed to write file ${outputPath}: ${error}`);
   }
 };
+
+// Must stay below the helpers above: `const` functions are not hoisted.
+try {
+  run();
+} catch (error: any) {
+  core.setFailed(error.message);
+}
