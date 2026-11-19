@@ -39,7 +39,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
       - name: Install dependencies
         id: install_dependencies
-        run: yarn install --check-files --frozen-lockfile
+        run: npm ci
       - name: release
         id: release
         run: npx projen release
