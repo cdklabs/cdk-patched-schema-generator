@@ -6,7 +6,6 @@ const project = new GitHubActionTypeScriptProject({
   name: 'cdk-patched-schema-generator',
   projenrcTs: true,
   packageManager: javascript.NodePackageManager.NPM,
-  minNodeVersion: '22.13.0',
   workflowNodeVersion: 'lts/*',
   runner: typescript.TypeScriptRunner.tsx(),
   depsUpgradeOptions: {

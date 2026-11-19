@@ -54,9 +54,6 @@
     "@octokit/rest": "^20.1.2",
     "fs-extra": "^11.4.1"
   },
-  "engines": {
-    "node": ">= 22.13.0"
-  },
   "devEngines": {
     "packageManager": {
       "name": "npm",
