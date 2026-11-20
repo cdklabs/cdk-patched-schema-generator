@@ -1,11 +1,16 @@
+import { javascript, typescript } from 'projen';
 import { GitHubActionTypeScriptProject, RunsUsing } from 'projen-github-action-typescript';
 const project = new GitHubActionTypeScriptProject({
   defaultReleaseBranch: 'main',
   devDeps: ['projen-github-action-typescript', '@types/fs-extra'],
   name: 'cdk-patched-schema-generator',
   projenrcTs: true,
+  packageManager: javascript.NodePackageManager.NPM,
+  workflowNodeVersion: 'lts/*',
+  runner: typescript.TypeScriptRunner.tsx(),
   depsUpgradeOptions: {
     workflow: false,
+    cooldown: 3,
   },
   githubOptions: {
     mergify: false,
